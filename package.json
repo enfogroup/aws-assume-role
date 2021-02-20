@@ -1,0 +1,26 @@
+{
+  "name": "@enfo/aws-assume-role",
+  "version": "0.0.1",
+  "description": "Utility package for assuming into AWS roles in build pipelines",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/enfogroup/aws-assume-role.git"
+  },
+  "keywords": [
+    "aws",
+    "assume",
+    "role",
+    "build",
+    "pipelines"
+  ],
+  "author": "Urban Pettersson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/enfogroup/aws-assume-role/issues"
+  },
+  "homepage": "https://github.com/enfogroup/aws-assume-role#readme"
+}
