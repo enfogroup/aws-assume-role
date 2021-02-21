@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/enfogroup/aws-assume-role/issues"
   },
-  "homepage": "https://github.com/enfogroup/aws-assume-role#readme"
+  "homepage": "https://github.com/enfogroup/aws-assume-role#readme",
+  "dependencies": {
+    "@aws-sdk/client-sts": "^3.6.0"
+  }
 }
