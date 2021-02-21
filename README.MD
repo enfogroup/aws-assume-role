@@ -21,10 +21,10 @@ Add a role specific role to your package.json
 }
 ```
 
-The package will print variables on the format "export AWS_ACCESS_KEY_ID=AKI..." so in your build pipelines you have to run eval on the output.
+The package will print variables on the format "export AWS_ACCESS_KEY_ID=AKI..." so in your build pipelines you have to run eval on the output. The silent flag suppresses npm script output which would ruin the command.
 
 ```bash
-eval $(npm run assume:test)
+eval $(npm run assume:test --silent)
 ```
 
 ## Configuration
