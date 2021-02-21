@@ -10,7 +10,7 @@ npm install @enfo/aws-assume --save-dev
 
 ## Usage
 
-Add a role specific role to your package.json
+Add a role specific script to your package.json
 
 ```json
 {
