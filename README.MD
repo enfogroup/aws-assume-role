@@ -10,18 +10,18 @@ npm install @enfo/aws-assume --save-dev
 
 ## Usage
 
-Add a role specific script to your package.json
+Let us say you have two accounts: A and B. In your build pipelines you have AWS keys configured for deployments to account A. If you want to deploy to B you need to setup a role that the deploying account A role can assume. Then you can set it up as follows:
 
 ```json
 {
   "scripts": {
-    "assume:test": "./node_modules/.bin/aws-assume ROLE_ARN_HERE"
+    "assume:test": "./node_modules/.bin/aws-assume ACCOUNT_B_ARN_HERE"
   }
   ...
 }
 ```
 
-The package will print variables on the format "export AWS_ACCESS_KEY_ID=AKI..." so in your build pipelines you have to run eval on the output. The silent flag suppresses npm script output which would ruin the command.
+The package will print variables on the format "export AWS_ACCESS_KEY_ID=ASIA..." so in your build pipelines you have to run eval on the output. The silent flag suppresses npm script output which would otherwise ruin the command.
 
 ```bash
 eval $(npm run assume:test --silent)
