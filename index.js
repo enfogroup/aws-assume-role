@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const { STSClient, AssumeRoleCommand } = require('@aws-sdk/client-sts')
 
 const [_, _2, arn, duration] = process.argv
