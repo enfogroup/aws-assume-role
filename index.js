@@ -2,17 +2,21 @@
 
 const { STSClient, AssumeRoleCommand } = require('@aws-sdk/client-sts')
 
-const [_, _2, arn, duration] = process.argv
+const [_, _2, region, arn, duration] = process.argv
 
 if (!arn) {
   throw new Error('Missing AWS role ARN')
 }
 
-const client = new STSClient({})
+if (!region) {
+  throw new Error('Missing AWS region')
+}
+
+const client = new STSClient({ region })
 const command = new AssumeRoleCommand({
   RoleArn: process.argv[2],
   RoleSessionName: `pipelines-assume-${Date.now()}`,
-  DurationSeconds: duration ? Number(duration): 900
+  DurationSeconds: duration ? Number(duration) : 900
 })
 
 client.send(command, (err, data) => {
