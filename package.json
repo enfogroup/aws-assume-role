@@ -4,7 +4,7 @@
   "description": "Utility package for assuming into AWS roles in build pipelines",
   "main": "index.js",
   "bin": {
-    "enfo-aws-assume": "./index.js"
+    "aws-assume": "./index.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
