@@ -14,7 +14,7 @@ if (!arn) {
 
 const client = new STSClient({ region })
 const command = new AssumeRoleCommand({
-  RoleArn: process.argv[2],
+  RoleArn: arn,
   RoleSessionName: `pipelines-assume-${Date.now()}`,
   DurationSeconds: duration ? Number(duration) : 900
 })
