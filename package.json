@@ -1,6 +1,6 @@
 {
   "name": "@enfo/aws-assume",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Utility package for assuming into AWS roles in build pipelines",
   "main": "index.js",
   "bin": {
