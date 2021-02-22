@@ -4,12 +4,12 @@ const { STSClient, AssumeRoleCommand } = require('@aws-sdk/client-sts')
 
 const [_, _2, region, arn, duration] = process.argv
 
-if (!arn) {
-  throw new Error('Missing AWS role ARN')
-}
-
 if (!region) {
   throw new Error('Missing AWS region')
+}
+
+if (!arn) {
+  throw new Error('Missing AWS role ARN')
 }
 
 const client = new STSClient({ region })
