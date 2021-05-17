@@ -15,7 +15,7 @@ Let us say you have two accounts: A and B. In your build pipelines you have AWS 
 ```json
 {
   "scripts": {
-    "assume:test": "./node_modules/.bin/aws-assume ACCOUNT_B_ARN_HERE"
+    "assume:test": "npx aws-assume ACCOUNT_B_ARN_HERE"
   }
   ...
 }
@@ -35,5 +35,5 @@ It takes two parameters - role ARN and session duration.
 * The duration is in seconds and optional, the default value is 900 seconds (15 minutes). Example:
 
 ```bash
-./node_modules/.bin/aws-assume arn:aws:iam::111122223333:role/Some-Fancy-Role 1800
+npx aws-assume arn:aws:iam::111122223333:role/Some-Fancy-Role 1800
 ```
