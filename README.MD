@@ -15,7 +15,7 @@ Let us say you have two accounts: A and B. In your build pipelines you have AWS 
 ```json
 {
   "scripts": {
-    "assume:test": "./node_modules/.bin/aws-assume eu-north-1 ACCOUNT_B_ARN_HERE"
+    "assume:test": "./node_modules/.bin/aws-assume ACCOUNT_B_ARN_HERE"
   }
   ...
 }
@@ -29,12 +29,11 @@ eval $(npm run assume:test --silent)
 
 ## Configuration
 
-It takes three parameters - region, role ARN and session duration.
+It takes two parameters - role ARN and session duration.
 
-* The region is mandatory and if one is not supplied an error will be thrown
 * The role ARN is mandatory and if one is not supplied an error will be thrown
 * The duration is in seconds and optional, the default value is 900 seconds (15 minutes). Example:
 
 ```bash
-./node_modules/.bin/aws-assume eu-north-1 arn:aws:iam::111122223333:role/Some-Fancy-Role 1800
+./node_modules/.bin/aws-assume arn:aws:iam::111122223333:role/Some-Fancy-Role 1800
 ```
