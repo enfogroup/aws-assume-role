@@ -4,7 +4,7 @@
   "description": "Utility package for assuming into AWS roles in build pipelines",
   "main": "index.js",
   "bin": {
-    "aws-assume": "./index.js"
+    "enfo-aws-assume": "./index.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -27,6 +27,6 @@
   },
   "homepage": "https://github.com/enfogroup/aws-assume-role#readme",
   "dependencies": {
-    "@aws-sdk/client-sts": "^3.6.0"
+    "@aws-sdk/client-sts": "^3.16.0"
   }
 }
